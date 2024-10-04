@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 20px;
+            color: #0056b3; /* Navy blue for headers */
+        }
+
+        h2,h3 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        /* Form Styles */
+        form {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        button {
+            background-color: #28a745; /* Green background */
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #218838; /* Darker green on hover */
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0056b3; /* Navy blue background for footer */
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Kamaraj College of Engineering and Technology</h1>
+    <h2>Web Application using Django Network</h2>
+    <h2> S. Afrin Thayufa III/IT</h2>
+    <h3> 22UUIT054</h3>
+    <h1>Welcome to the Email Sending Service</h1>
+
+    <form method="post" action="{% url 'send_email' %}">
+        {% csrf_token %}
+        <button type="submit">Send Email</button>
+    </form>
+
+    <footer>
+        &copy; 2024 Kamaraj College of Engineering and Technology
+    </footer>
+
+</body>
+</html>
